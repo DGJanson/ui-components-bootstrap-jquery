@@ -1,5 +1,5 @@
-./dist
-./node-modules
-./package.json
-./package-lock.json
-./webpack.config.json
+dist/
+node_modules/
+package.json
+package-lock.json
+webpack.config.js
