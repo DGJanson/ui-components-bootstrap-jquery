@@ -59,6 +59,6 @@ Once created you can use the following methods to manipulate the created content
 - setSrc(url) - see img above
 - addClicklistener(callback) - pass a function that is added on click
 
-Note that you can create custom elements and adding them by calling ui\_container.addJqueryContent(jQueryObject)
+Note that you can create custom elements and adding them by calling ui\_column.addJqueryContent(jQueryObject)
 
 Also note that you can always get the underlying jquery object by calling getElement on the ui\_content class, or any ui\_ class for that matter
