@@ -1,6 +1,6 @@
 Convencience methods for creating html elements using jQuery and bootstrap.
 
-Uses imports for jquery and bootstrap, so make sure these are loaded in package.json or your dependency manager of choice.
+Uses imports for jquery and bootstrap, so make sure these are loaded in package.json or your dependency manager of choice. Also you might want to add the bootstrap css to you html / index js file, to make full use of the bootstrap styling.
 
 Otherwise just copy the create-ui-components.js file to an appropriate src location and you can use the classes and methods exposed.
 
@@ -11,7 +11,7 @@ Bootstrap uses a nested grid system. See the [bootstrap documentation](https://g
 
 container -> row -> column -> content
 
-All methods return themselves, so you can chain methods. Each element allows you to set class and or id for further manipulation. **Keep in mind that the methods return the classes of the javascript file, NOT the jquery elements themselves!** In order to get the corresponding elements, call the getElement() method on the create-ui class.
+All methods return the created ui\_classes, so you can chain methods. Each element allows you to set class and or id for further manipulation. **Keep in mind that the methods return the ui\_classes defined in this javascript file, NOT the jquery elements themselves!** In order to get the corresponding elements, call the getElement() method on the create-ui class.
 
 Examples
 --------
@@ -19,15 +19,15 @@ Examples
 Create container and add to body:
 
 ```javascript
-let container = new ui\_container();
+let container = new ui_container();
 $("body").append(container.getElement()); // Add the element, NOT the class
 ```
 
 Create two columns with some text:
 
 ```javascript
-let factory = new ui\_factory(); 
-let row = new ui\_container().addRow().addClass("custom-row-class");
+let factory = new ui_factory(); 
+let row = new ui_container().addRow().addClass("custom-row-class");
 // addColumn without parameter defaults to "col" class
 row.addColumn().addContent(factory.generateP) // Do not execute function, but pass as callback.
   .setText("Example text") // This sets the text on <p> the content just created.
