@@ -18,14 +18,14 @@ Examples
 
 Create container and add to body:
 
-'''javascript
+```javascript
 let container = new ui\_container();
 $("body").append(container.getElement()); // Add the element, NOT the class
-'''
+```
 
 Create two columns with some text:
 
-'''javascript
+```javascript
 let factory = new ui\_factory(); 
 let row = new ui\_container().addRow().addClass("custom-row-class");
 // addColumn without parameter defaults to "col" class
@@ -37,7 +37,7 @@ row.addColumn().addContent(factory.generateP) // Do not execute function, but pa
 row.addColumn("col-6").addContent(factory.generateP)
   .setText("More example text)
   .setId("id-another-p");
-'''
+```
 
 Factory
 -------
